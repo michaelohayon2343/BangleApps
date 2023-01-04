@@ -1,5 +1,6 @@
 {
     "id": "counter_app",
+    "name": "Michael Counter",
     "icon": "timer.png",
     "version" : "0.0.1"
 }
