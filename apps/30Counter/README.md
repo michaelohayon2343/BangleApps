@@ -1,8 +1,8 @@
-# Counter30 App
-Countdown of 30 sec
+# Counter10 App
+Countdown of 10 sec
 
 ## Features
-Count from 30 to 0 and in the end the watch will buzz
+Count from 10 to 0 and in the end the watch will buzz
 
 ## Controls
 - Short press on button to reset the timer at the end of countdown
