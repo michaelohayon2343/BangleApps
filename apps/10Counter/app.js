@@ -1,19 +1,17 @@
+var boolean = false;
+var number = 10;
 var counter;
 var counterInterval;
 
 function outOfTime() {
   if (counterInterval) return;
-  E.showMessage("Out of Time", "My Timer");
-  Bangle.buzz();
-  Bangle.beep(200, 4000)
-    .then(() => new Promise(resolve => setTimeout(resolve,200)))
-    .then(() => Bangle.beep(200, 3000));
+  E.showMenu(endmenu);
 }
 
 function countDown() {
   counter--;
   // Out of time
-  if (counter<=0) {
+  if (counter<0) {
     clearInterval(counterInterval);
     counterInterval = undefined;
     outOfTime();
@@ -30,20 +28,48 @@ function countDown() {
 }
 
 function startTimer() {
-  counter = 10;
+  counter = number;
   countDown();
-  
-  setWatch(exit,  BTN1,{repeat:true});
-  
   if (!counterInterval)
     counterInterval = setInterval(countDown, 1000);
 }
 
-function exit(){
-   counter =0
-   Bangle.buzz();
-   g.clear();
-  
-}
 
-startTimer();
+//endmenu
+var endmenu = {
+  "": {
+    "title": " Timer Ended"
+  },
+  "Reset": function() {
+    startTimer();
+  },
+  "Back": function() {
+    E.showMenu(mainmenu);
+  },
+};
+
+
+var mainmenu = {
+  "": {
+    "title": " Main Menu"
+  },
+  "Start Timer": function() {
+    startTimer();
+  },
+  "Countdown to": {
+    value: number,
+    min: 0,
+    max: 100,
+    step: 10,
+    onchange: v => {
+      number = v;
+    }
+  },
+  "Exit": function() {
+  Bangle.loadWidgets();
+  draw();
+  setTimeout(Bangle.drawWidgets,0);
+  }
+};
+
+E.showMenu(mainmenu);
