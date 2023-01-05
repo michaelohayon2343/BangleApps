@@ -8,8 +8,6 @@ function outOfTime() {
   Bangle.beep(200, 4000)
     .then(() => new Promise(resolve => setTimeout(resolve,200)))
     .then(() => Bangle.beep(200, 3000));
-  // again, 10 secs later
-  setTimeout(outOfTime, 10000);
 }
 
 function countDown() {
@@ -18,7 +16,6 @@ function countDown() {
   if (counter<=0) {
     clearInterval(counterInterval);
     counterInterval = undefined;
-    setWatch(startTimer, (process.env.HWVERSION==2) ? BTN1 : BTN2)
     outOfTime();
     return;
   }
@@ -35,8 +32,18 @@ function countDown() {
 function startTimer() {
   counter = 10;
   countDown();
+  
+  setWatch(exit,  BTN1,{repeat:true});
+  
   if (!counterInterval)
     counterInterval = setInterval(countDown, 1000);
+}
+
+function exit(){
+   counter =0
+   Bangle.buzz();
+   g.clear();
+  
 }
 
 startTimer();
