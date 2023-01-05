@@ -1,7 +1,7 @@
 { 
   "id": "30Counter",
   "name": "Counter 30 Sec",
-  "shortName":"Count_30S",
+  "shortName":"Count 30S",
   "version":"0.0.1",
   "description": "Countdown 30 seconds and buzz at the end",
   "icon": "app.png",
