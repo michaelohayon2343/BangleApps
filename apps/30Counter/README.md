@@ -8,4 +8,4 @@ Count from 30 to 0 and in the end the watch will buzz
 Press the button to exit from app at any time
 
 ## Creator
-Micahel Ohayon
+Michael Ohayon
