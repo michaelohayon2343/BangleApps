@@ -1,9 +1,9 @@
 { 
   "id": "10Counter",
-  "name": "Counter 10 Sec",
-  "shortName":"Count 10S",
+  "name": "Counter X Sec",
+  "shortName":"Counter",
   "version":"0.05",
-  "description": "Countdown 10 seconds and buzz at the end",
+  "description": "Countdown X seconds",
   "icon": "app.png",
   "tags": "",
   "supports" : ["BANGLEJS2"],  
