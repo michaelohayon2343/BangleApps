@@ -2,7 +2,7 @@
   "id": "30Counter",
   "name": "Counter 30 Sec",
   "shortName":"Count 30S",
-  "version":"0.0.1",
+  "version":"0.0.2",
   "description": "Countdown 30 seconds and buzz at the end",
   "icon": "app.png",
   "tags": "",
