@@ -2,7 +2,7 @@
   "id": "10Counter",
   "name": "Counter 10 Sec",
   "shortName":"Count 10S",
-  "version":"0.04",
+  "version":"0.05",
   "description": "Countdown 10 seconds and buzz at the end",
   "icon": "app.png",
   "tags": "",
