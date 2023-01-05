@@ -33,7 +33,7 @@ function countDown() {
 }
 
 function startTimer() {
-  counter = 10;
+  counter = 30;
   countDown();
   if (!counterInterval)
     counterInterval = setInterval(countDown, 1000);
