@@ -28,7 +28,7 @@ function countDown() {
 }
 
 function startTimer() {
-  counter = number;
+  counter = number+1;
   countDown();
   if (!counterInterval)
     counterInterval = setInterval(countDown, 1000);
@@ -66,9 +66,8 @@ var mainmenu = {
     }
   },
   "Exit": function() {
-  Bangle.loadWidgets();
-  draw();
-  setTimeout(Bangle.drawWidgets,0);
+    Bangle.loadWidgets();
+    Bangle.drawWidgets();
   }
 };
 
