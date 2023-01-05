@@ -1,11 +1,10 @@
-# Counter10 App
-Countdown of 10 sec
+# Counter App
+Countdown of chosen X sec
 
 ## Features
-Count from 10 to 0 and in the end the watch will buzz
+Count from X to 0
 
 ## Controls
-- Short press on button to reset the timer at the end of countdown
 - Long press on button to exit from app at any time
 
 ## Creator
