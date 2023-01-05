@@ -25,7 +25,7 @@ function countDown() {
 
   g.clear();
   g.setFontAlign(0,0); // center font
-  g.setFont("Vector",80); // vector font, 80px  
+  g.setFont("Vector",40); // vector font, 80px  
   // draw the current counter value
   g.drawString(counter,120,120);
   // optional - this keeps the watch LCD lit up
