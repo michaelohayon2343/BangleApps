@@ -1,4 +1,4 @@
-var counter = 30;
+var counter;
 var counterInterval;
 
 function outOfTime() {
@@ -33,7 +33,7 @@ function countDown() {
 }
 
 function startTimer() {
-  counter = 30;
+  counter = 10;
   countDown();
   if (!counterInterval)
     counterInterval = setInterval(countDown, 1000);
